@@ -1,0 +1,39 @@
+<!-- @let isHandset = this.isHandset();
+@let collapsed = this.collapsed();
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer
+        [mode]="isHandset ? 'over' : 'side'"
+        [opened]="!isHandset && !collapsed"
+        [fixedInViewport]="isHandset"
+        class="sidenav border-r border-gray-200"
+        [class.collapsed]="collapsed && !isHandset">
+        <app-sidenav [collapsed]="collapsed"/>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            @if (false) {
+                <button mat-icon-button (click)="toggleSideNav();">
+                <mat-icon>menu</mat-icon>
+                </button>
+            } @else if (true) {
+                <button mat-icon-button (click)="toggleSideNav();">
+                <mat-icon>{{ collapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
+                </button>
+            }
+        <span>ChoreBan</span>
+        </mat-toolbar>
+        <div class="content">
+            <router-outlet />
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
+<main class="flex h-screen">
+    <div class="flex w-72 flex-col">
+        <!-- Sidebar -->
+         <app-sidenav [collapsed]="collapsed()"/>
+        
+    </div>
+    <div class="content p-8">
+            <router-outlet />
+    </div>
+</main>
