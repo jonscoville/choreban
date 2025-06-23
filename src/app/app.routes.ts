@@ -23,5 +23,10 @@ export const routes: Routes = [
                 title: 'Tasks'
             }
         ]
+    },
+    {
+        path: 'login',
+        loadComponent: () => import('./core/auth/login/login').then(m => m.Login),
+        title: 'Login'
     }
 ];

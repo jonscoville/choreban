@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
-  imports: [MatSidenavModule, MatButtonModule, MatIcon, MatToolbar, Sidenav, RouterOutlet],
+  imports: [MatSidenavModule, MatButtonModule, Sidenav, RouterOutlet],
   templateUrl: './layout.html',
   styleUrl: './layout.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
